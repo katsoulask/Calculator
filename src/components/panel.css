@@ -1,0 +1,47 @@
+body {
+  background-color: green;
+}
+
+.calc-panel {
+   
+  font-family: "Nerko One", cursive;
+  background-image: url("../image/bg-image.jpg");
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  
+}
+
+.content {
+  font-family: "Nerko One", cursive;
+
+  border: 2px solid black;
+  background-color: lightgray;
+  margin-right: auto;
+  margin-left: auto;
+  border-spacing: 0;
+}
+table td input {
+  width: 100%;
+  font-size: large;
+  font-family: "Nerko One", cursive;
+}
+table {
+  border: 1px solid black;
+}
+table td {
+  border: 1px solid black;
+}
+
+#display {
+  background-color: whitesmoke;
+  color: black;
+  width: 95%;
+}
+
+.display-row {
+  padding-bottom: 20px;
+}
+th {
+  text-align: center;
+}
