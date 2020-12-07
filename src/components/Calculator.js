@@ -1,10 +1,13 @@
 import React from "react";
 import "./panel.css";
+import Button from "./Button";
+import Display from "./Display";
 
 export default class Panel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "", total: "" };
+    this.state = { value: "" };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = (button) => {
@@ -21,26 +24,39 @@ export default class Panel extends React.Component {
   };
   calculate = () => {
     var a = [];
-    
+
     if (this.state.value.includes("+")) {
-      a = this.state.value.split("+").map(x=>+x).reduce((a,b)=>a+b);
+      a = this.state.value
+        .split("+")
+        .map((x) => +x)
+        .reduce((a, b) => a + b);
       return this.setState({ value: a });
-    }  else if (this.state.value.includes("--")) {
-      a = this.state.value.split("--").map(x=>+x).reduce((a,b)=>a+b);
-      return this.setState({ value: a });} 
-     
-     else if (this.state.value.includes("X")) {
-      a = this.state.value.split("X").map(x=>+x).reduce((a,b)=>a*b);
-       return this.setState({ value: a }) 
+    } else if (this.state.value.includes("--")) {
+      a = this.state.value
+        .split("--")
+        .map((x) => +x)
+        .reduce((a, b) => a + b);
+      return this.setState({ value: a });
+    } else if (this.state.value.includes("X")) {
+      a = this.state.value
+        .split("X")
+        .map((x) => +x)
+        .reduce((a, b) => a * b);
+      return this.setState({ value: a });
     } else if (this.state.value.includes("-")) {
-      a = this.state.value.split("-").map(x=>+x).reduce((a,b)=>a-b);
-     return this.setState({value:a})
+      a = this.state.value
+        .split("-")
+        .map((x) => +x)
+        .reduce((a, b) => a - b);
+      return this.setState({ value: a });
     } else if (this.state.value.includes("/")) {
-      a = this.state.value.split("/").map(x=>+x).reduce((a,b)=>a/b);
-      
+      a = this.state.value
+        .split("/")
+        .map((x) => +x)
+        .reduce((a, b) => a / b);
+
       return this.setState({ value: a });
     }
-    
   };
 
   render() {
@@ -52,198 +68,63 @@ export default class Panel extends React.Component {
           </tr>
           <tr className="display-row">
             <td colSpan="4">
-              <input
-                type="text"
-                name="Display"
-                id="display"
-                disabled
-                value={this.state.value}
-              ></input>
+              <Display value={this.state.value} />
             </td>
           </tr>
           <tr>
             <td>
-              <input
-                type="button"
-                name="1"
-                value="1"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="1" value="1" />
             </td>
             <td>
-              <input
-                type="button"
-                name="2"
-                value="2"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="2" value="2" />
             </td>
             <td>
-              <input
-                type="button"
-                name="3"
-                value="3"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="3" value="3" />
             </td>
             <td>
-              <input
-                type="button"
-                className="button"
-                name="plus"
-                value="+"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-              />
+              <Button handleClick={this.handleClick} name="+" value="+" />
             </td>
           </tr>
           <tr>
             <td>
-              <input
-                type="button"
-                name="4"
-                value="4"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="4" value="4" />
             </td>
             <td>
-              <input
-                type="button"
-                name="5"
-                value="5"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="5" value="5" />
             </td>
             <td>
-              <input
-                type="button"
-                name="6"
-                value="6"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="6" value="6" />
             </td>
             <td>
-              <input
-                type="button"
-                className="button"
-                name="-"
-                value="-"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-              />
+              <Button handleClick={this.handleClick} name="-" value="-" />
             </td>
           </tr>
           <tr>
             <td>
-              <input
-                type="button"
-                name="7"
-                value="7"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="7" value="7" />
             </td>
             <td>
-              <input
-                type="button"
-                name="8"
-                value="8"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="8" value="8" />
             </td>
             <td>
-              <input
-                type="button"
-                name="9"
-                value="9"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="9" value="9" />
             </td>
             <td>
-              <input
-                type="button"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-                name="X"
-                value="X"
-              />
+              <Button handleClick={this.handleClick} name="X" value="X" />
             </td>
           </tr>
           <tr>
             <td>
-              <input
-                type="button"
-                id="clear"
-                name="C"
-                value="C"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="C" value="C" />
             </td>
             <td>
-              <input
-                type="button"
-                name="zero"
-                value="0"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="zero" value="0" />
             </td>
             <td>
-              <input
-                type="button"
-                name="="
-                value="="
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-              />
+              <Button handleClick={this.handleClick} name="=" value="=" />
             </td>
             <td>
-              <input
-                type="button"
-                onClick={(e) => {
-                  this.handleClick(e.target.value);
-                }}
-                className="button"
-                name="/"
-                value="/"
-              />
+              <Button handleClick={this.handleClick} name="/" value="/" />
             </td>
           </tr>
         </table>
