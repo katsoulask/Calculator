@@ -3,15 +3,12 @@ body {
 }
 
 .calc-panel {
-   
   font-family: "Nerko One", cursive;
-  background-image: url("../image/bg-image.jpg");
+  background-image: url("./image/bg-image.jpg");
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
-  
 }
-
 .content {
   font-family: "Nerko One", cursive;
 
@@ -33,15 +30,6 @@ table td {
   border: 1px solid black;
 }
 
-#display {
-  background-color: whitesmoke;
-  color: black;
-  width: 95%;
-}
-
-.display-row {
-  padding-bottom: 20px;
-}
 th {
   text-align: center;
 }
