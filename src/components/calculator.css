@@ -4,7 +4,7 @@ body {
 
 .calc-panel {
   font-family: "Nerko One", cursive;
-  background-image: url("./image/bg-image.jpg");
+  background-image: url("../images/bg-image.jpg");
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
