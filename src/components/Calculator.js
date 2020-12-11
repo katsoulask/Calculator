@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./styles/panel.css";
+import React from "react";
+import "./calculator.css";
 import Button from "./Button";
 import Display from "./Display";
-import CalcApp from './CalcApp';
+import CalcApp from '../utils/CalcApp';
 
 
 export default function Calculator() {

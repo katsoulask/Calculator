@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/display.css'
+import './display.css'
 export default function Display(props){
     let result=props.value;
     return(
