@@ -1,5 +1,5 @@
 
-export default function CalculateValue(){
+export default function calculateValue(){
 const calculate = (val) => {
   if (val.includes("+")) {
     return val.split('+').map((x)=>+x).reduce((a, b) => a + b);

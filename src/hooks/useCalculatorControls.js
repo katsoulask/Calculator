@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CalculateValue from "../utils/calculateValue";
+import calculateValue from "../utils/calculateValue";
 
 export default function useCalculatorControls() {
   const [value, setValue] = useState("");
@@ -7,7 +7,7 @@ export default function useCalculatorControls() {
 
   const handleClick = (button) => {
     if (button === "=") {
-      return setValue(CalculateValue(value));
+      return setValue(calculateValue(value));
     } else if (button === "C") {
       reset();
     } else {
