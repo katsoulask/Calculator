@@ -2,11 +2,11 @@ import React from "react";
 import "./calculator.css";
 import Button from "./Button";
 import Display from "./Display";
-import CalcApp from '../utils/CalcApp';
+import useCalculatorControls from '../hooks/useCalculatorControls';
 
 
 export default function Calculator() {
-  const{ handleClick,value} = CalcApp()
+  const{ handleClick,value} = useCalculatorControls()
   
   return (
     <div className="calc-panel">
