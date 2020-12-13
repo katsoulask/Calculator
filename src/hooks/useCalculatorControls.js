@@ -3,7 +3,6 @@ import calculateValue from "../utils/calculateValue";
 
 export default function useCalculatorControls() {
   const [value, setValue] = useState("");
-  
 
   const handleClick = (button) => {
     if (button === "=") {
