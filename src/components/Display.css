@@ -1,12 +1,6 @@
 #display {
-<<<<<<< HEAD:src/components/display.css
-  background-color: whitesmoke;
-  color: black;
-  width: 95%;
-}
-=======
     background-color: whitesmoke;
     color: black;
-    width: 95%;
+    width: auto;
   }
->>>>>>> 0e8ba18bf782523eb482be06c8c372ebfd9515bb:src/components/Display.css
+

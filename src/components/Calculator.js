@@ -11,10 +11,10 @@ export default function Calculator() {
     <div className="calc-panel">
       <table className="content">
         <tr>
-          <th colSpan="4">Calculator App</th>
+          <th colSpan="5">Calculator App</th>
         </tr>
         <tr className="display-row">
-          <td colSpan="4">
+          <td colSpan="5">
             <Display value={value} />
           </td>
         </tr>
@@ -28,8 +28,12 @@ export default function Calculator() {
           <td>
             <Button handleClick={handleClick} name="3" value="3" />
           </td>
+
           <td>
-            <Button handleClick={handleClick} name="+" value="+" />
+            <Button handleClick={handleClick} name="/" value="/" />
+          </td>
+          <td rowSpan="4" id="plus">
+            <Button handleClick={handleClick} name="=" value="=" />
           </td>
         </tr>
         <tr>
@@ -68,10 +72,10 @@ export default function Calculator() {
             <Button handleClick={handleClick} name="zero" value="0" />
           </td>
           <td>
-            <Button handleClick={handleClick} name="=" value="=" />
+            <Button handleClick={handleClick} name="." value="." />
           </td>
           <td>
-            <Button handleClick={handleClick} name="/" value="/" />
+            <Button handleClick={handleClick} name="+" value="+" />
           </td>
         </tr>
       </table>
