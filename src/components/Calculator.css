@@ -1,36 +1,36 @@
 body {
-  background-color: green;
+    background-color: green;
 }
 
 .calc-panel {
-  font-family: "Nerko One", cursive;
-  background-image: url("../images/bg-image.jpg");
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin: auto;
-  color: rgb(138, 92, 50);
+    font-family: 'Nerko One', cursive;
+    background-image: url('../images/bg-image.jpg');
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    color: rgb(138, 92, 50);
 }
 .content {
-  font-family: "Nerko One", cursive;
+    font-family: 'Nerko One', cursive;
 
-  border: 2px solid black;
-  background-color: rgb(194, 193, 196);
-  margin-right: auto;
-  margin-left: auto;
-  border-spacing: 0;
+    border: 2px solid black;
+    background-color: rgb(194, 193, 196);
+    margin-right: auto;
+    margin-left: auto;
+    border-spacing: 0;
 }
 table td input {
-  width: 100%;
-  font-size: large;
-  font-family: "Nerko One", cursive;
+    width: 100%;
+    font-size: large;
+    font-family: 'Nerko One', cursive;
 }
 table {
-  border: 1px solid black;
+    border: 1px solid black;
 }
 table td {
-  border: 1px solid black;
+    border: 1px solid black;
 }
 
 th {
-  text-align: center;
+    text-align: center;
 }
