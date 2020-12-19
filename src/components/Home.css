@@ -1,0 +1,29 @@
+body {
+    background: linear-gradient(to bottom right, black, white);
+    color: whitesmoke;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+h1:hover {
+    color: red;
+}
+img {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+    box-shadow: 5px 10px whitesmoke;
+}
+img:hover {
+    width: 70vw;
+}
+p {
+    text-align: center;
+}
